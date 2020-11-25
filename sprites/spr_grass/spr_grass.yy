@@ -25,7 +25,9 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"3e28ae44-40a5-4e7e-9540-e02e52bc31dc","path":"sprites/spr_grass/spr_grass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3e28ae44-40a5-4e7e-9540-e02e52bc31dc","path":"sprites/spr_grass/spr_grass.yy",},"LayerId":{"name":"c33d2288-af4e-4f6a-b241-2ffd327464fa","path":"sprites/spr_grass/spr_grass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"3e28ae44-40a5-4e7e-9540-e02e52bc31dc","path":"sprites/spr_grass/spr_grass.yy",},"LayerId":{"name":"56d6935e-472b-47b1-8189-adf8f9e403b7","path":"sprites/spr_grass/spr_grass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"3e28ae44-40a5-4e7e-9540-e02e52bc31dc","path":"sprites/spr_grass/spr_grass.yy",},"LayerId":{"name":"ed4f3aaf-abd5-4fd0-9fab-605cec5deabe","path":"sprites/spr_grass/spr_grass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_grass","path":"sprites/spr_grass/spr_grass.yy",},"resourceVersion":"1.0","name":"3e28ae44-40a5-4e7e-9540-e02e52bc31dc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -65,6 +67,8 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"ed4f3aaf-abd5-4fd0-9fab-605cec5deabe","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":50.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"c33d2288-af4e-4f6a-b241-2ffd327464fa","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"56d6935e-472b-47b1-8189-adf8f9e403b7","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {

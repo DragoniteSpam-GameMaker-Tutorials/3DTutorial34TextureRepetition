@@ -30,8 +30,14 @@ camera_set_view_mat(camera, view_mat);
 camera_set_proj_mat(camera, proj_mat);
 camera_apply(camera);
 
+if (keyboard_check(vk_shift)) {
+    gpu_set_tex_repeat(true);
+} else {
+    gpu_set_tex_repeat(false);
+}
 // Everything must be drawn after the 3D projection has been set
 vertex_submit(vbuffer, pr_trianglelist, sprite_get_texture(spr_grass, 0));
+
 
 // Draw the player
 matrix_set(matrix_world, matrix_build(Player.x, Player.y, Player.z, 0, 0, 0, 1, 1, 1));

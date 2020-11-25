@@ -41,25 +41,19 @@ vertex_begin(vbuffer, vertex_format);
 // Create a checkerboard pattern on the floor
 var s = 128;
 
-for (var i = 0; i < room_width; i += s) {
-    for (var j = 0; j < room_height; j += s) {
-        if ((i % (s * 2) == 0 && j % (s * 2) == 0) || (i % (s * 2) > 0 && j % (s * 2) > 0)) {
-            var color = c_aqua;
-        } else {
-            var color = c_white;
-        }
-        
-        #region add data to the vertex buffer
-        vertex_add_point(vbuffer, i, j, 0,                  0, 0, 1,        0, 0,       color, 1);
-        vertex_add_point(vbuffer, i + s, j, 0,              0, 0, 1,        1, 0,       color, 1);
-        vertex_add_point(vbuffer, i + s, j + s, 0,          0, 0, 1,        1, 1,       color, 1);
+var xtex = room_width / sprite_get_width(spr_grass);
+var ytex = room_height / sprite_get_height(spr_grass);
+var color = c_white;
 
-        vertex_add_point(vbuffer, i + s, j + s, 0,          0, 0, 1,        1, 1,       color, 1);
-        vertex_add_point(vbuffer, i, j + s, 0,              0, 0, 1,        0, 1,       color, 1);
-        vertex_add_point(vbuffer, i, j, 0,                  0, 0, 1,        0, 0,       color, 1);
-        #endregion
-    }
-}
+#region add data to the vertex buffer
+vertex_add_point(vbuffer, 0, 0, 0,                          0, 0, 1,        0, 0,       color, 1);
+vertex_add_point(vbuffer, room_width, 0, 0,                 0, 0, 1,        xtex, 0,       color, 1);
+vertex_add_point(vbuffer, room_width, room_height, 0,       0, 0, 1,        xtex, ytex,       color, 1);
+
+vertex_add_point(vbuffer, room_width, room_height, 0,       0, 0, 1,        xtex, ytex,       color, 1);
+vertex_add_point(vbuffer, 0, room_height, 0,                0, 0, 1,        0, ytex,       color, 1);
+vertex_add_point(vbuffer, 0, 0, 0,                          0, 0, 1,        0, 0,       color, 1);
+#endregion
 
 vertex_end(vbuffer);
 #endregion
